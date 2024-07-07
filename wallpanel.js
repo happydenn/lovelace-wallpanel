@@ -1768,7 +1768,7 @@ class WallpanelView extends HuiView {
 				logger.debug(`Got unsplash API response`);
 				http.response.forEach(entry => {
 					logger.debug(entry);
-					const url = entry.urls.raw + "&w=${width}&h=${height}&auto=format";
+					const url = entry.urls.regular;
 					urls.push(url);
 					data[url] = entry;
 				});
